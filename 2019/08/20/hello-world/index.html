@@ -1,210 +1,312 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hello World | 熊二 Blog</title><meta name="author" content="熊二"><meta name="copyright" content="熊二"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xiaoqiu1219.github.io/2019/08/20/hello-world/index.html">
-<meta property="og:site_name" content="熊二 Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
-<meta property="article:published_time" content="2019-08-20T07:26:31.000Z">
-<meta property="article:modified_time" content="2022-05-27T09:23:05.180Z">
-<meta property="article:author" content="熊二">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><link rel="shortcut icon" href="/img/xionger.png"><link rel="canonical" href="https://xiaoqiu1219.github.io/2019/08/20/hello-world/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: {"limitCount":50,"languages":{"author":"作者: 熊二","link":"链接: ","source":"来源: 熊二 Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Hello World',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2022-05-27 17:23:05'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
+<html lang="zh">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
+        .startgame,
+        .resgame {
+            width: 200px;
+            height: 60px;
+            background-color: black;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+            transition: all .2s linear;
         }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+
+        .resgame {
+            margin-top: 50px;
         }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+
+        .fs {
+            font-size: 30px;
+            color: white;
+            position: fixed;
         }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
+
+        .gameover {
+            padding: 50px;
+            width: 500px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            text-align: center;
+            border-radius: 20px;
+            display: none;
         }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/84608378?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 休闲清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">熊二 Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 休闲清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hello World</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-08-20T07:26:31.000Z" title="发表于 2019-08-20 15:26:31">2019-08-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-27T09:23:05.180Z" title="更新于 2022-05-27 17:23:05">2022-05-27</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hello World"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    </style>
+</head>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<body>
+    <audio src="bgsound.mp3"></audio>
+    <button class="startgame">开 始 游 戏</button>
+    <div class="fs"><span>分数：</span><span class="score">0</span></div>
+    <div class="gameover">
+        <h1>分数：<span class="Gscore">0</span></h1>
+        <button class="resgame">重 新 开 始</button>
+    </div>
+    <canvas></canvas>
+    <script>
+        window.onload = () => {
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+            // 禁止右键
+            document.oncontextmenu = function () {
+                return false;
+            };
+            // 让文字无法被选中
+            document.addEventListener("selectstart", function (e) {
+                e.preventDefault();
+            });
+            // 开始游戏
+            let btn1 = document.querySelector('.startgame');
+            btn1.addEventListener('click', () => {
+                let canvas = document.querySelector('canvas');
+                let ctx = canvas.getContext('2d');
+                // 设置canvas宽高
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+                // 通用属性
+                class Item {
+                    constructor(x, y, radius, color, velocity) {
+                        this.x = x;
+                        this.y = y;
+                        this.radius = radius;
+                        this.color = color; // 颜色
+                        this.velocity = velocity; // 速度
+                    };
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://xiaoqiu1219.github.io">小Q</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xiaoqiu1219.github.io/2022/05/26/hello-world/">https://xiaoqiu1219.github.io/2022/05/26/hello-world/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">此文章版权归博客作者所有，如有转载，请註明来自原作者</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/ShareJS/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/ShareJS/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2019/08/21/My-New-Post/"><img class="prev-cover" src="https://img0.baidu.com/it/u=3590598559,3597726109&amp;fm=253&amp;fmt=auto?w=800&amp;h=500" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">My New Post</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/84608378?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">熊二</div><div class="author-info__description">今日事，今日闭</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://xiaoqiu1219.github.io/"><i class="fab fa-github"></i><span>我的博客</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xiaoqiu1219/xiaoqiu1219.github.io" target="_blank" title="Github的个人博客地址"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="a1345152248"><i class="fa-brands fa-weixin"></i></a><a class="social-icon" href="http://www.qq.com" target="_blank" title="1345152248"><i class="fa-brands fa-quora"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">我的第一次博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2019/08/21/My-New-Post/" title="My New Post"><img src="https://img0.baidu.com/it/u=3590598559,3597726109&amp;fm=253&amp;fmt=auto?w=800&amp;h=500" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="My New Post"/></a><div class="content"><a class="title" href="/2019/08/21/My-New-Post/" title="My New Post">My New Post</a><time datetime="2019-08-21T07:26:31.000Z" title="发表于 2019-08-21 15:26:31">2019-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/08/20/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2019/08/20/hello-world/" title="Hello World">Hello World</a><time datetime="2019-08-20T07:26:31.000Z" title="发表于 2019-08-20 15:26:31">2019-08-20</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By 熊二</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">所有内容均有作者熊二编写，转载请标明出处</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('/pluginsSrc/pangu/dist/browser/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
+                    // 绘制
+                    draw() {
+                        ctx.beginPath(); // 绘制路径
+                        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false); // 绘制圆形
+                        ctx.fillStyle = this.color; // 填充颜色
+                        ctx.fill(); // 填充
+                    };
 
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
+                    // 移动
+                    ai() {
+                        this.draw();
+                        this.x = this.x + this.velocity.x;
+                        this.y = this.y + this.velocity.y;
+                    };
+                };
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
+                // 玩家
+                class Player extends Item {
+                    constructor(x, y, radius, color) {
+                        super(x, y, radius, color);
+                        this.draw();
+                    };
+                };
 
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(() => {
-  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
-  if ($mermaidWrap.length) {
-    window.runMermaid = () => {
-      window.loadMermaid = true
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+                // 敌人
+                class Ele extends Item {
+                    constructor(x, y, radius, color, velocity) {
+                        super(x, y, radius, color, velocity);
+                    };
+                };
 
-      Array.from($mermaidWrap).forEach((item, index) => {
-        const mermaidSrc = item.firstElementChild
-        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
-        const mermaidID = 'mermaid-' + index
-        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
-        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
-          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
-        })
-      })
-    }
+                // 子弹
+                class Bullet extends Item {
+                    constructor(x, y, radius, color, velocity) {
+                        super(x, y, radius, color, velocity);
+                    };
+                };
 
-    const loadMermaid = () => {
-      window.loadMermaid ? runMermaid() : getScript('/pluginsSrc/mermaid/dist/mermaid.min.js').then(runMermaid)
-    }
+                // 粒子效果
+                class Particle extends Item {
+                    constructor(x, y, radius, color, velocity, friction) {
+                        super(x, y, radius, color, velocity);
+                        this.x = x;
+                        this.y = y;
+                        this.radius = radius;
+                        this.color = color;
+                        this.velocity = velocity;
+                        this.alpha = 1;
+                        this.friction = friction;
+                    };
 
-    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
-  }
-})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="/pluginsSrc/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+                    draw() {
+                        ctx.save(); //保存当前canvas的状态
+                        ctx.globalAlpha = this.alpha; // 透明度
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+                        ctx.fillStyle = this.color;
+                        ctx.fill();
+                        ctx.restore();
+                    };
+
+                    ai() {
+                        this.draw();
+                        this.velocity.x *= this.friction;
+                        this.velocity.y *= this.friction;
+                        this.x = this.x + this.velocity.x;
+                        this.y = this.y + this.velocity.y;
+                        this.alpha -= 0.01;
+                    };
+                };
+
+                let bulletArray = [];
+                let eleArray = [];
+                let particles = [];
+
+                let oScore = document.querySelector('.score');
+                let oGameOver = document.querySelector('.gameover');
+                let Gscore = document.querySelector('.Gscore');
+                let score = 0;
+                let flag = true;
+                btn1.disabled = true;
+                btn1.style.top = -60 + 'px';
+                // 动画
+                let animateId;
+
+                function animate() {
+                    if (flag) requestAnimationFrame(animate);
+                    // 填充背景颜色
+                    ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    // 创建玩家
+                    let player = new Player(canvas.width / 2, canvas.height / 2, 20, 'white');
+                    // 遍历子弹
+                    bulletArray.map((item, index) => {
+                        item.ai();
+                        // 删除
+                        if (item.x <= 0 - item.radius || item.y <= 0 - item.radius || item.x >=
+                            canvas.width || item.y >= canvas.height) {
+                            bulletArray.splice(index, 1);
+                        };
+                        // 判断
+                        eleArray.map((ele, i) => {
+                            let dist = Math.hypot(ele.x - item.x, ele.y - item.y);
+                            // 添加粒子效果
+                            if (dist - item.radius - ele.radius < 1) {
+                                for (let i = 0; i < item.radius * 8; i++) {
+                                    particles.push(new Particle(ele.x, ele.y, Math
+                                        .random() * 4, ele.color, {
+                                            x: (Math.random() - 0.5) * (Math
+                                                .random() * 6),
+                                            y: (Math.random() - 0.5) * (Math
+                                                .random() * 6),
+                                        }, 0.97));
+                                };
+                                let a = new Audio();
+                                a.src = 'a.mp3';
+                                a.play();
+                                // 打中后减小
+                                if (ele.radius - 16 > 10) {
+                                    ele.radius -= 16;
+                                    bulletArray.splice(index, 1);
+                                    score += 100;
+                                    oScore.innerHTML = score;
+                                } else {
+                                    bulletArray.splice(index, 1);
+                                    eleArray.splice(i, 1);
+                                    score += 250;
+                                    oScore.innerHTML = score;
+                                };
+                            };
+                        });
+                    });
+                    // 遍历敌人
+                    eleArray.map((item) => {
+                        item.ai();
+                        // 判断玩家和敌人碰撞 游戏结束
+                        let dist = Math.hypot(player.x - item.x, player.y - item.y);
+                        if (dist - item.radius - player.radius < 1) {
+                            flag = false;
+                            document.querySelector("audio").pause();
+                            Gscore.innerHTML = score;
+                            oGameOver.style.display = 'block';
+                        };
+                    });
+                    particles.map((item, index) => {
+                        if (item.alpha <= 0) {
+                            particles.splice(index, 1);
+                        } else {
+                            item.ai();
+                        };
+                    });
+
+                };
+                animate();
+
+                // 子弹
+                window.addEventListener('mousedown', (e) => {
+                    if (!flag) return;
+                    let b = new Audio();
+                    b.src = 'b.mp3';
+                    b.play();
+                    // 返回原点到点的线段与x轴正方向之间的平面角度
+                    let angle = Math.atan2(e.clientY - canvas.height / 2, e.clientX - canvas.width /
+                        2);
+                    console.log(angle);
+                    // 把角度转换
+                    let velocity = {
+                        x: Math.cos(angle) * 8,
+                        y: Math.sin(angle) * 8
+                    };
+                    // 添加到数组里
+                    bulletArray.push(new Bullet(canvas.width / 2, canvas.height / 2, 5, 'white',
+                        velocity));
+                });
+                // 敌人
+                setInterval(() => {
+                    if (!flag) return;
+                    document.querySelector('audio').play();
+                    // 随机大小
+                    let radius = Math.random() * (35 - 15) + 15;
+                    // 随机颜色
+                    let color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                    let x, y;
+                    // 随机位置
+                    if (Math.random() < 0.5) {
+                        x = Math.random() < 0.5 ? 0 - radius : canvas.width + radius;
+                        y = Math.random() * canvas.height + radius;
+                    } else {
+                        x = Math.random() * canvas.width + radius;
+                        y = Math.random() < 0.5 ? 0 - radius : canvas.height + radius;
+                    }
+                    let angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x);
+                    let velocity = {
+                        x: Math.cos(angle) * 2.5,
+                        y: Math.sin(angle) * 2.5,
+                    };
+                    eleArray.push(new Ele(x, y, radius, color, velocity));
+                }, 2000);
+            });
+            document.querySelector('.resgame').addEventListener('click', () => {
+                location.reload();
+            });
+        }
+    </script>
+</body>
+
+</html>
